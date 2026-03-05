@@ -1,0 +1,49 @@
+#User function Template for python3
+
+class Solution:
+    
+    #Function to find the maximum number of meetings that can
+    #be performed in a meeting room.
+    def maximumMeetings(self,start,end):
+        # code here
+        zipped_pairs = zip(end, start)
+
+        # 2. Sort the zipped pairs. Sorting is done primarily on the first element (from array2)
+        sorted_pairs = sorted(zipped_pairs)
+        # sorted_pairs will be: [(1, 'banana'), (2, 'date'), (3, 'apple'), (4, 'cherry')]
+        
+        # 3. Unpack the sorted pairs back into two separate lists
+        sorted_end, sorted_start = zip(*sorted_pairs)
+        
+        # Convert tuples to lists if needed
+        sorted_start = list(sorted_start)
+        sorted_end = list(sorted_end)
+        #print(sorted_start,sorted_end)
+        count_meetings = 1
+        prev_end = sorted_end[0]
+        a=[1]
+        for i in range(1,len(start)):
+            if sorted_start[i]>prev_end:
+                count_meetings += 1
+                a.append(i+1)
+                prev_end = sorted_end[i]
+        #print(a)
+        return count_meetings
+    
+'''You are given timings of n meetings in the form of (start[i], end[i]) where start[i] is the start time of meeting i and end[i] is the finish time of meeting i. Return the maximum number of meetings that can be accommodated in a single meeting room, when only one meeting can be held in the meeting room at a particular time. 
+
+Note: The start time of one chosen meeting can't be equal to the end time of the other chosen meeting.
+
+Examples :
+
+Input: start[] = [1, 3, 0, 5, 8, 5], end[] =  [2, 4, 6, 7, 9, 9]
+Output: 4
+Explanation: Maximum four meetings can be held with given start and end timings. The meetings are - (1, 2), (3, 4), (5,7) and (8,9)
+Input: start[] = [10, 12, 20], end[] = [20, 25, 30]
+Output: 1
+Explanation: Only one meetings can be held with given start and end timings.
+Input: start[] = [1, 2], end[] = [100, 99]
+Output: 1
+Constraints:
+1 ≤ n ≤ 105
+0 ≤ start[i] < end[i] ≤ 106'''

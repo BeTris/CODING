@@ -62,9 +62,12 @@ def reverse(s,l,r):
         s[l],s[r]=s[r],s[l]
         l+=1
         r-=1
-    return s    
+    return s
+    
 def revWordsOpti(s):
     listFromString = list(s)
     listFromString = reverse(listFromString,0,len(listFromString)-1)
     print(listFromString)
+    for ch in listFromString:
+        if 
 revWordsOpti("  Hello I  am ")

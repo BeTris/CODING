@@ -25,7 +25,7 @@ Explanation:
 
 The element on index 0 or index 3 make up the largest sum when taken as a subarray'''
 
-'''Print subarray with maximum subarray sum (extended version of above problem)'''
+
 
 #brute force
 #O(n^2)
@@ -54,3 +54,9 @@ def subArrayKadane(nums):
     return max_sum 
 
 print(subArrayKadane([-2, -3, -5, 0, -7, -4]))
+
+'''Print subarray with maximum subarray sum (extended version of above problem)'''
+
+def printMaxSubAray(nums):
+    n = len(nums)
+    

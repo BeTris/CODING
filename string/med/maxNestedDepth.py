@@ -1,3 +1,4 @@
+#DONE 
 '''A string s is a valid parentheses string (VPS) if it meets the following conditions:
 
 It only contains digits 0-9, arithmetic operators +, -, *, /, and parentheses (, ).

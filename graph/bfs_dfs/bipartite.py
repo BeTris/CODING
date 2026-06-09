@@ -11,7 +11,7 @@ class Solution:
                 return False
         return True
         
-    def isBipartite(self, graph: List[List[int]]) -> bool:
+    def isBipartite(self, graph) -> bool:
         V = len(graph)
         visited = [0]*V
         color = 1

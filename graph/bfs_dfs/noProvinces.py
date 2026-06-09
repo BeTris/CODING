@@ -38,7 +38,7 @@ class Solution:
                 self.dfs(matrix,visited,neighbour,n)
         return
 
-    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+    def findCircleNum(self, isConnected) -> int:
         #number of connected components problem
         n = len(isConnected)
         count = 0 

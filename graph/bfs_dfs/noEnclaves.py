@@ -31,7 +31,7 @@ class Solution:
         self.dfs(visited,grid,i, j+1,n,m)
         self.dfs(visited,grid,i, j-1,n,m)
 
-    def numEnclaves(self, grid: List[List[int]]) -> int:
+    def numEnclaves(self, grid) -> int:
         n = len(grid)
         m = len(grid[0])
         visited = [[0]*m for _ in range(n)]
